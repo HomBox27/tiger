@@ -54,10 +54,9 @@ client.on('message', message => { // هاذا للبرودكسات
 			dontSendBC.on('collect', r => {
 				msg.delete();
 				message.reply(':white_check_mark: **تم الغاء ارسال رسالتك بنجاح**').then(msg => msg.delete(5000));
-			});
-		})
-	}
 });
+
+
 client.on('message', message => { // هاذا للبرودكسات
         var prefix = '§'; // هنا تقدر تغير البرفكس
 	var command = message.content.split(" ")[0];
@@ -79,7 +78,10 @@ client.on('message', message => { // هاذا للبرودكسات
 		message.channel.send(bcSure).then(msg => {
 			msg.react('✅').then(() => msg.react('❎'));
 			message.delete();
-
+			});
+		})
+	}
+});
 
 
 client.login(process.env.BOT_TOKEN);
