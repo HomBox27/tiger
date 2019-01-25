@@ -3,6 +3,7 @@ const client = new Discord.Client();
 
 
 client.on('ready', () => {
+  client.user.setGame('§help | ByLioNDz','https://www.twitch.tv/TiGeRDz');
   console.log(`Your Bot Is Online ${client.user.tag}!`);
 });
 
